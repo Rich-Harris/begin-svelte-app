@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "bundle.css",
+  "sources": [
+    "../src/App.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\n  import { onMount } from 'svelte'\n  export let message;\n  onMount(async () => {\n    let data = await (await fetch('/api')).json()\n    message = data.msg\n    console.log('MESSAGE: ', message)\n  })\n</script>\n\n<style>\n  h1 {\n    color: purple;\n  }\n</style>\n\n<h1>{message}</h1>\n"
+  ],
+  "names": [],
+  "mappings": "AAWE,EAAE,eAAC,CAAC,AACF,KAAK,CAAE,MAAM,AACf,CAAC"
+}
